@@ -124,9 +124,14 @@
             // Telegram.WebApp.showAlert(`name=${name} age=${age}`);
 
 
-            const result = window.Telegram.WebApp.CloudStorage.getItem('key1');
-            result_as_string = result['result'];
-            Telegram.WebApp.showAlert(`result_as_string=${result_as_string}`);
+            //window.Telegram.WebApp.CloudStorage.getItem('key1',((err,value)=>{console.log(value)}));
+            
+
+            window.Telegram.WebApp.CloudStorage.getItem('key1',((err,value)=>{
+                
+                Telegram.WebApp.showAlert(`result_as_string=${value}`);
+
+            }));
 
 
         };
