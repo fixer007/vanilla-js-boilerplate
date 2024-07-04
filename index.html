@@ -119,6 +119,8 @@
         function showAlert() 
         {
             // Telegram.WebApp.showAlert('Hello World!');
+            const name = localStorage.getItem('name');
+            const age = localStorage.getItem('age');
             Telegram.WebApp.showAlert(`name=${name} age=${age}`);
         };
 
