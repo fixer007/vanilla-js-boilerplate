@@ -119,9 +119,16 @@
         function showAlert() 
         {
             // Telegram.WebApp.showAlert('Hello World!');
-            const name = localStorage.getItem('name');
-            const age = localStorage.getItem('age');
-            Telegram.WebApp.showAlert(`name=${name} age=${age}`);
+            // const name = localStorage.getItem('name');
+            // const age = localStorage.getItem('age');
+            // Telegram.WebApp.showAlert(`name=${name} age=${age}`);
+
+
+            const result = window.Telegram.WebApp.CloudStorage.getItem('key1');
+            result_as_string = result['result'];
+            Telegram.WebApp.showAlert(`result_as_string=${result_as_string}`);
+
+
         };
 
         // Function to call showPopup API
@@ -179,6 +186,9 @@
             const age = 'age';
             localStorage.setItem('name', name);
             localStorage.setItem('age', age);
+
+            window.Telegram.WebApp.CloudStorage.setItem('key1','value1');
+
             // alert('Data saved to localStorage!');
         }
 
