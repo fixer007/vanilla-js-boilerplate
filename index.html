@@ -106,7 +106,11 @@
             text: 'Main Button'
         });
         Telegram.WebApp.MainButton.onClick(function () {
-            Telegram.WebApp.showAlert('Main Button was clicked')
+            // Telegram.WebApp.showAlert('Main Button was clicked')
+
+
+
+            // Telegram.WebApp.showAlert('Main Button was clicked')
         });	
         Telegram.WebApp.MainButton.show();
 
@@ -172,10 +176,15 @@
         function loadData() {
             const name = localStorage.getItem('name');
             const age = localStorage.getItem('age');
-            if (name && age) {
-                document.getElementById('name').value = name;
-                document.getElementById('age').value = age;
-                alert('Data loaded from localStorage!');
+            
+            if (name && age) 
+            {
+                // document.getElementById('name').value = name;
+                // document.getElementById('age').value = age;
+                // alert('Data loaded from localStorage!');
+
+
+                Telegram.WebApp.showAlert(`name=${name} age=${age}`)
             } else {
                 alert('No data found in localStorage.');
             }
