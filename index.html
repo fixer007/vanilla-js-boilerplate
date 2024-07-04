@@ -68,7 +68,7 @@
             <a href="https://ton.org/"><img width="48" src="./assets/tapps.png" alt="logo of telegram web apps"></a>
         </div>
         <h1>Modals</h1>
-        <button onclick="Telegram.WebApp.showAlert('Hello World!');">Launch Alert</button>
+        <button onclick="showAlert();">Launch Alert</button>
         <button onclick="showPopup();">Launch Popup</button>
 
         <h1>Links</h1>
@@ -113,6 +113,14 @@
             // Telegram.WebApp.showAlert('Main Button was clicked')
         });	
         Telegram.WebApp.MainButton.show();
+
+
+         // Function to call showPopup API
+        function showAlert() 
+        {
+            // Telegram.WebApp.showAlert('Hello World!');
+            Telegram.WebApp.showAlert(`name=${name} age=${age}`);
+        };
 
         // Function to call showPopup API
         function showPopup() {
