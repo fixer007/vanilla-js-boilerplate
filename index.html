@@ -155,6 +155,35 @@
 
     </script>
 
+    <script>
+        // Function to save data to localStorage
+        function saveData() {
+            // const name = document.getElementById('name').value;
+            // const age = document.getElementById('age').value;      
+            
+            const name = 'name';
+            const age = 'age';
+            localStorage.setItem('name', name);
+            localStorage.setItem('age', age);
+            // alert('Data saved to localStorage!');
+        }
+
+        // Function to load data from localStorage
+        function loadData() {
+            const name = localStorage.getItem('name');
+            const age = localStorage.getItem('age');
+            if (name && age) {
+                document.getElementById('name').value = name;
+                document.getElementById('age').value = age;
+                alert('Data loaded from localStorage!');
+            } else {
+                alert('No data found in localStorage.');
+            }
+        }
+
+        saveData();
+    </script>
+
     <!-- Eruda is console for mobile browsers -->
     <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
     <script>eruda.init();</script>
